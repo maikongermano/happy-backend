@@ -1,35 +1,13 @@
 import { Router } from 'express'
-import { getRepository } from 'typeorm'
-import Orphanage from './models/Orphanage'
+import OrphanagesController from './controllers/OrphanagesControllers'
 
 const router = Router();
 
-router.post('/orphanages', async (request, response) => {
-    const {
-       name,
-       latitude,
-       longitude,
-       about,
-       instructions,
-       opening_hours,
-       open_on_weekends
-    } = request.body
+// MVC
+// Model -> representação de uma tabela no banco
+// Views -> visualização disponivel para front-end
+// Controllers -> lógica das rotas
 
-    const orphanagesRepository = getRepository(Orphanage)
-
-    const orphanage = orphanagesRepository.create({
-        name,
-        latitude,
-        longitude,
-        about,
-        instructions,
-        opening_hours,
-        open_on_weekends,
-    });
-
-    await orphanagesRepository.save(orphanage);
-
-    return response.status(201).json(orphanage);
-})
+router.post('/orphanages', OrphanagesController.create)
 
 export default router;
