@@ -1,6 +1,10 @@
 import Orphanage from "../models/Orphanage";
 
+
+// controlar dados de retorno
 export default {
+
+    // retorna unico orfanato
     render(orphanage: Orphanage) {
         return {
             name: orphanage.id,
@@ -11,5 +15,10 @@ export default {
             opening_hours: orphanage.opening_hours,
             open_on_weekends: orphanage.open_on_weekends, 
         };
+    },
+
+    // retorna varios orfanatos    
+    renderMany(orphanages: Orphanage[]) {
+        return orphanages.map(orphanage => this.render(orphanage))
     }
 };
