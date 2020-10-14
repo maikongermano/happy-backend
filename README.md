@@ -8,7 +8,7 @@ Visite orfanatos e mude o dia de muitas crianças.
 # Tecnologias Utilizadas 🚀
 Node <br />
 Express <br />
-Typescript 🦕 <br />
+Typescript <br />
 TypeOrm <br />
 Sqlite <br />
 Multer <br />
