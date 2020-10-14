@@ -4,6 +4,7 @@ import 'express-async-errors'
 import './database/connection';
 
 import routes from './routes'
+import errorHandler from './errors/handler';
 
 const app = express();
 
@@ -14,5 +15,8 @@ app.use(routes);
 
 // rota para images
 app.use('/uploads', express.static(path.join(__dirname, '..', 'uploads')))
+
+// lidar exceções
+app.use(errorHandler);
 
 app.listen(3333);
