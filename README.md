@@ -39,4 +39,3 @@ $ git push origin minha-branch
 ```
 
 Delete sua branch, se quiser, quando o merge da sua pull request for feito. <br />
-
