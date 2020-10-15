@@ -8,7 +8,7 @@ Visite orfanatos e mude o dia de muitas crianças.
 # Tecnologias Utilizadas 🚀
 Node <br />
 Express <br />
-Typescript 🦕 <br />
+Typescript <br />
 TypeOrm <br />
 Sqlite <br />
 Multer <br />
@@ -39,4 +39,3 @@ $ git push origin minha-branch
 ```
 
 Delete sua branch, se quiser, quando o merge da sua pull request for feito. <br />
-
