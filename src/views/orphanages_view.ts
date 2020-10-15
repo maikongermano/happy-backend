@@ -7,7 +7,7 @@ export default {
     // retorna unico orfanato
     render(orphanage: Orphanage) {
         return {
-            name: orphanage.id,
+            name: orphanage.name,
             latitude: orphanage.latitude,
             longitude: orphanage.longitude,
             about: orphanage.about,
